@@ -2,12 +2,13 @@ import Profile from "./Profile/Profile";
 import Statistics from "./Statistics/Statistics";
 import user from './path/to/user.json'
 import data from './path/to/data.json'
+import friends  from './path/to/friends.json'
+import FriendList from "./FriendList/FriendList";
 
 export const App = () => {
   return (
     <div
       style={{
-        height: '100vh',
 			  display: 'flex',
 		  flexDirection: 'column',
         justifyContent: 'center',
@@ -31,6 +32,7 @@ export const App = () => {
 		  <Statistics
 			  stats={data}
 		  />
+		  <FriendList friends={friends} />
     </div>
   );
 };

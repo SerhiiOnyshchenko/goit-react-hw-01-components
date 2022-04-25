@@ -3,26 +3,26 @@ import PropTypes from 'prop-types';
 
 function Profile({ username, tag, location, avatar, stats }) {
   return (
-    <div class={s.profile}>
-      <div class={s.description}>
-        <img src={avatar} alt="User avatar" class={s.avatar} />
-        <p class={s.name}>{username}</p>
-        <p class={s.tag}>{tag}</p>
-        <p class={s.location}>{location}</p>
+    <div className={s.profile}>
+      <div className={s.description}>
+        <img src={avatar} alt="User avatar" className={s.avatar} />
+        <p className={s.name}>{username}</p>
+        <p className={s.tag}>{tag}</p>
+        <p className={s.location}>{location}</p>
       </div>
 
-      <ul class={s.stats}>
+      <ul className={s.stats}>
         <li>
-          <span class={s.label}>Followers</span>
-          <span class={s.quantity}>{stats.followers}</span>
+          <span className={s.label}>Followers</span>
+          <span className={s.quantity}>{stats.followers}</span>
         </li>
         <li>
-          <span class={s.label}>Views</span>
-          <span class={s.quantity}>{stats.views}</span>
+          <span className={s.label}>Views</span>
+          <span className={s.quantity}>{stats.views}</span>
         </li>
         <li>
-          <span class={s.label}>Likes</span>
-          <span class={s.quantity}>{stats.likes}</span>
+          <span className={s.label}>Likes</span>
+          <span className={s.quantity}>{stats.likes}</span>
         </li>
       </ul>
     </div>
@@ -34,13 +34,11 @@ Profile.propType = {
   tag: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
   avatar: PropTypes.string.isRequired,
-  stats: PropTypes.objectOf(
-    PropTypes.shape({
+  stats: PropTypes.objectOf({
       followers: PropTypes.number.isRequired,
       views: PropTypes.number.isRequired,
       likes: PropTypes.number.isRequired,
-    })
-  ),
+    }),
 };
 
 export default Profile;

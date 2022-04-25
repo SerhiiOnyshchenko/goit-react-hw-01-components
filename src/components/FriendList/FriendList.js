@@ -1,14 +1,14 @@
 import s from './FriendList.module.css';
-import  PropTypes  from 'prop-types';
+import PropTypes from 'prop-types';
 
-function FriendList({friends}) {
+function FriendList({ friends }) {
 	return (
       <ul className={s.friendList}>
-         {friends.map(friend => {
+			{friends.map(friend => {
             return (
                <li className={s.item} key={friend.id}>
                   <span
-                     className={
+							className={
                         friend.isOnline
                            ? s.status + ' ' + s.statusGreen
                            : s.status + ' ' + s.statusRed
